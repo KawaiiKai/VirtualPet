@@ -1,6 +1,20 @@
+  int hair = 125;
+  int x = 5;
+  int hairy = 30;
+  int HairLength = 200;
+  float pie = 0.01;
+  float pies = PI/0.54;
+  int hair2 = 155;
+  int hair3 = 245;
+  int hairy2 = 0;
+  int HairLength2 = 302;
+  float pies2 = PI/0.54;
+
 void setup()
 {
   size(500,800);
+
+  
 }
 void draw()
 {
@@ -45,18 +59,50 @@ void draw()
   
   //face
   
-  line(180,220,210,250);
-  line(320,220,290,250);
-  line(180,190,180,220);
-  line(320,190,320,220);
-  arc(250,150,100,300,PI/1.43,PI/1.13);
-  arc(250,150,100,300,PI/8.78,PI/3.33);
+  line(180,250,210,280);
+  line(320,250,290,280);
+  line(180,220,180,250);
+  line(320,220,320,250);
+  arc(250,185,100,300,PI/1.43,PI/1.13);
+  arc(250,185,100,300,PI/8.78,PI/3.33);
   
   strokeWeight(5);
-  line(223,275,277,275);
+  line(223,305,277,305);
   strokeWeight(1);
   
-  line(180,190,175,180);
-  line(320,190,325,180);
- 
+  line(180,220,175,210);
+  line(320,220,325,210);
+  line(175,140,175,210);
+  line(325,140,325,210);
+  arc(250,92,400,100,PI/2.65,PI/1.61);
+  
+  //hair
+  arc(hair,140,100,HairLength,pies,PI/0.5);
+  while(hair < 155){
+    arc(hair,140,100,HairLength,pies,PI/0.5);
+    hair = hair + x;
+    pies = pies - pie;
+    HairLength = HairLength + hairy;
+    hairy = hairy - 7;
+  }
+  arc(hair2,140,100,HairLength,pies,PI/0.5);
+  while (hair2 < 245){
+    arc(hair2,140,100,HairLength,pies,PI/0.5);
+    hair2 = hair2 + x;
+  }
+  arc(hair3,140,100,HairLength2,pies2,PI/0.5);
+  while(hair3 < 275){
+    arc(hair3,140,100,HairLength2,pies2,PI/0.5);
+    hair3 = hair3 + x;
+    pies2 = pies2 + pie;
+    HairLength2 = HairLength2 - hairy2;
+    hairy2 = hairy2 + 1;
+  }
+    
+  
+  
+  //neck
+  arc(235,260,100,200,PI/1.2,PI/1);
+  arc(265,260,100,200,PI/0.5,PI/0.459);
 }
+
